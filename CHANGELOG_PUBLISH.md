@@ -1,3 +1,5 @@
+# V2.0.0 — AutoTranslation Next 正式发布
+
 ## 变更
 
 1. **平台迁移**: 从 Architectury (Forge/Fabric) 迁移到纯 NeoForge，支持 Minecraft 1.21.1；

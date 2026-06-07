@@ -1,4 +1,4 @@
-# V2.0.0
+# V2.0.0 — AutoTranslation Next 正式发布
 
 2026-06-07
 
