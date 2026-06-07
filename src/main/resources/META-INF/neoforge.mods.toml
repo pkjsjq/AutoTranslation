@@ -1,0 +1,36 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+
+license = "GNU Affero General Public License v3.0"
+issueTrackerURL = "https://github.com/LangYueMc/AutoTranslation/issues/new"
+
+[[mods]]
+modId = "autotranslation"
+version = "${version}"
+displayName = "AutoTranslation Next"
+logoFile = "icon.png"
+authors = "墨涤千尘"
+description = '''
+AutoTranslation Next - auto translation for Minecraft. Supports Google Translate (default) and AAAABBBB.
+'''
+
+[[dependencies.autotranslation]]
+modId = "neoforge"
+mandatory = true
+versionRange = "[4,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.autotranslation]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.autotranslation]]
+modId = "cloth_config"
+mandatory = true
+versionRange = "[15,)"
+ordering = "NONE"
+side = "BOTH"
