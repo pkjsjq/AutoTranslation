@@ -1,4 +1,19 @@
-> The following is a machine translation. Welcome to correct grammatical errors.
+# V2.0.0
+
+2026-06-07
+
+## Changed
+
+1. **Platform Migration**: Migrated from Architectury (Forge/Fabric) to pure NeoForge, targeting Minecraft 1.21.1;
+2. **Project Simplification**: Removed multi-platform architecture (common/fabric/forge), converted to single-project Gradle build;
+3. **Screen Translation Removed**: Completely removed screen translation feature (hotkey translate, translation icon, screen config), keeping only language file auto-translation;
+4. **New AAAABBBB Translator**: Test-purpose translator that always returns "AAAABBBB" for pipeline verification;
+5. **Google Optimized**: Default domain changed to `google-translate-proxy.tantu.com` (accessible from China), Google set as default translator;
+6. **Rewritten HTTP Client**: Migrated from Apache HttpClient to JDK built-in `java.net.http.HttpClient`, zero extra dependencies;
+7. **Optimized English Regex**: Default pattern changed to `^(?!.*%[A-Za-z0-9])(?!.*_)(?=.*([A-Z]?[a-z]{2,})).+$`, excluding format placeholders and translation key mismatches;
+8. **Auto Cache Cleanup**: Modifying filter mode, English feature, language feature, translator, or word blacklist automatically deletes translation cache with restart reminder;
+9.  **Removed Patchouli/FTB Compatibility**: Stripped Fabric-platform compatibility code;
+10. **Dropped Fabric/Forge**: No longer supports Fabric or Forge platforms — NeoForge only.
 
 # V1.2.1
 
@@ -116,7 +131,7 @@
 2. Fix Forge startup crash due to Mixin failure.
 3. Fix the null pointer exception caused by calling getInstance() before Minecraft.instance has been assigned a value.
 
-   Forge doesn’t know what the problem is. The instance is assigned so late.
+   Forge doesn't know what the problem is. The instance is assigned so late.
 
 # V1.0.0-beta.7
 
@@ -165,7 +180,7 @@
 ## Fixed
 
 1. Compatibility with other mixins that load resources or call ClientLanguage.loadFrom Mods.
-2. When translating the language file, the (.\*) part in the content format (.\*): was mistakenly replaced.
+2. When translating the language file, the (.*) part in the content format (.*): was mistakenly replaced.
 3. String.format placeholder formatting exception when adding original text.
 
 # V1.0.0-alpha.2
