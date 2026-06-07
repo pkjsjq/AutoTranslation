@@ -7,11 +7,11 @@ issueTrackerURL = "https://github.com/LangYueMc/AutoTranslation/issues/new"
 [[mods]]
 modId = "autotranslation"
 version = "${version}"
-displayName = "AutoTranslation"
+displayName = "AutoTranslation Next"
 logoFile = "icon.png"
 authors = "墨涤千尘"
 description = '''
-Auto translation for Minecraft. Supports Google Translate (default) and AAAABBBB.
+AutoTranslation Next - auto translation for Minecraft. Supports Google Translate (default) and AAAABBBB.
 '''
 
 [[dependencies.autotranslation]]

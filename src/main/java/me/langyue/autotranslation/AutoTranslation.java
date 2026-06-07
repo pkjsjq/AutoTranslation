@@ -12,10 +12,10 @@ import org.slf4j.LoggerFactory;
 import java.nio.file.Path;
 
 public class AutoTranslation {
-    public static final Logger LOGGER = LoggerFactory.getLogger("AutoTranslation");
+    public static final Logger LOGGER = LoggerFactory.getLogger("AutoTranslation Next");
     public static final String MOD_ID = "autotranslation";
 
-    public static final Path ROOT = FMLPaths.GAMEDIR.get().resolve("AutoTranslation");
+    public static final Path ROOT = FMLPaths.GAMEDIR.get().resolve("AutoTranslationNext");
     public static Config CONFIG = null;
 
     public static void init() {

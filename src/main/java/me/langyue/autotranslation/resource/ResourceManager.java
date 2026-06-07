@@ -39,7 +39,7 @@ public class ResourceManager {
     private static final String ref = "_ref.json";
     private static final String packMcmeta = "pack.mcmeta";
 
-    public static final String BATCH_TRANSLATION = "AutoTranslation:Res";
+    public static final String BATCH_TRANSLATION = "AutoTranslationNext:Res";
     public static final Multimap<String, String> UNLOAD_KEYS = LinkedListMultimap.create();
     public static final Multimap<String, String> UNKNOWN_KEYS = LinkedListMultimap.create();
     private final static Object syncLock = new Object();
@@ -260,7 +260,7 @@ public class ResourceManager {
             }
         }
         if (namespaces.isEmpty()) return;
-        String resourcePack = "AutoTranslation." + AutoTranslation.getLanguage() + (increment ? ".Increment" : ".Full") + DateFormatUtils.format(System.currentTimeMillis(), ".yyMMdd_HHmm") + ".zip";
+        String resourcePack = "AutoTranslationNext." + AutoTranslation.getLanguage() + (increment ? ".Increment" : ".Full") + DateFormatUtils.format(System.currentTimeMillis(), ".yyMMdd_HHmm") + ".zip";
         Path zipOutName = AutoTranslation.ROOT.resolve(resourcePack);
         compressAssets(zipOutName, namespaces);
         AutoTranslation.LOGGER.info("Packaged resource pack: {}", zipOutName);

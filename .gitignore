@@ -105,6 +105,9 @@ atlassian-ide-plugin.xml
 # AI
 .claude/
 
+# Links reference (manual maintenance)
+【Links】.md
+
 #临时数据
 【1.20.1旧版模组代码】/
 【游戏数据】/

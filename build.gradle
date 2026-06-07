@@ -7,7 +7,7 @@ plugins {
 }
 
 base {
-    archivesName = 'AutoTranslation'
+    archivesName = 'AutoTranslation-Next'
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
