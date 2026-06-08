@@ -1,3 +1,15 @@
+# V2.1.0
+
+## 变更
+
+1. **智能翻译域名选择**: 首次安装时根据游戏语言自动选择最优 Google 翻译域名——简体中文使用国内代理，其他语言使用 translate.google.com。
+
+## Changed
+
+1. **Smart Domain Selection**: Automatically selects the best Google Translate domain on first install based on game language — Simplified Chinese uses the China proxy, others use translate.google.com.
+
+- - -
+
 # V2.0.0 — AutoTranslation Next 正式发布
 
 ## 变更

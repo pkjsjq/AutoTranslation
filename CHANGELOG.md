@@ -1,3 +1,12 @@
+# V2.1.0
+
+2026-06-08
+
+## 变更
+
+1. **智能翻译域名选择**: 首次安装时自动根据游戏语言选择最优 Google 翻译域名——简体中文（zh_cn）使用国内代理 `google-translate-proxy.tantu.com`，其他语言使用 `translate.google.com`；
+2. **默认域名调整**: Java 默认域名和兜底常量改为 `translate.google.com`，避免非中国用户被误导到国内代理。
+
 # V2.0.0 — AutoTranslation Next 正式发布
 
 2026-06-07

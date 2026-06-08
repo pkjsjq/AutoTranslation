@@ -1,39 +1,32 @@
 # Gradle
-.gradle/
-build/
-**/build/
-!gradle/wrapper/gradle-wrapper.jar
-gradle-app.setting
-.gradletasknamecache
-local.properties
+/.gradle/
+/build/
+!/gradle/wrapper/gradle-wrapper.jar
+/gradle-app.settings
+/.gradletasknamecache
+/local.properties
 
-# NeoGradle / Minecraft
-run/
-runs/
-logs/
-crash-reports/
-saves/
-screenshots/
-resourcepacks/
-config/
+# NeoGradle
+/run/
+/runs/
 
 # IDE — IntelliJ
-.idea/
+/.idea/
 *.iml
 *.ipr
 *.iws
-.idea_modules/
-out/
+/.idea_modules/
+/out/
 
 # IDE — VSCode
-.vscode/
+/.vscode/
 *.code-workspace
 
 # IDE — Eclipse
-.classpath
-.project
-.settings/
-bin/
+/.classpath
+/.project
+/.settings/
+/bin/
 
 # Compiled class file
 *.class
@@ -103,11 +96,11 @@ atlassian-ide-plugin.xml
 *.ctxt
 
 # AI
-.claude/
+/.claude/
 
 # Links reference (manual maintenance)
-【Links】.md
+/【Links】.md
 
-#临时数据
-【1.20.1旧版模组代码】/
-【游戏数据】/
+# 临时数据
+/【1.20.1旧版模组代码】/
+/【游戏数据】/

@@ -1,3 +1,12 @@
+# V2.1.0
+
+2026-06-08
+
+## Changed
+
+1. **Smart Domain Selection**: Automatically selects the optimal Google Translate domain on first install based on game language — Simplified Chinese (zh_cn) uses the China-accessible proxy `google-translate-proxy.tantu.com`, while all other languages use `translate.google.com`;
+2. **Default Domain Changed**: Java default value and fallback constant changed to `translate.google.com`, ensuring non-Chinese users are not directed to the China proxy.
+
 # V2.0.0 — AutoTranslation Next Release
 
 2026-06-07

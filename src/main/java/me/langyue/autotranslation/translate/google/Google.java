@@ -12,7 +12,7 @@ import java.util.Map;
 public class Google implements ITranslator {
 
     private static final Google INSTANCE = new Google();
-    private static final String DEFAULT_DOMAIN = "google-translate-proxy.tantu.com";
+    private static final String DEFAULT_DOMAIN = "translate.google.com";
     private static final Gson GSON = new Gson();
 
     private String domain = DEFAULT_DOMAIN;
