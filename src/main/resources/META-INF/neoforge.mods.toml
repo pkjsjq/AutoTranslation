@@ -9,7 +9,7 @@ modId = "autotranslation"
 version = "${version}"
 displayName = "AutoTranslation Next"
 logoFile = "icon.png"
-authors = "墨涤千尘"
+authors = "LiFrom"
 description = '''
 AutoTranslation Next - auto translation for Minecraft. Supports Google Translate (default) and AAAABBBB.
 '''
