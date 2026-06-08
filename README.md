@@ -4,11 +4,13 @@
 
 # English
 
+As the original author has indicated that development has been abandoned, this project is a continuation of [Moirstral/AutoTranslation](https://github.com/Moirstral/AutoTranslation).
+
 # AutoTranslation Next
 
 [![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?logo=modrinth)](https://modrinth.com/mod/autotranslation)
 [![CurseForge](https://img.shields.io/badge/CurseForge-Download-F16436?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/autotranslation)
-[![GitHub](https://img.shields.io/badge/GitHub-Source-181717?logo=github)](https://github.com/LangYueMc/AutoTranslation)
+[![GitHub](https://img.shields.io/badge/GitHub-Source-181717?logo=github)](https://github.com/pkjsjq/AutoTranslation-Next)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62B47A?logo=minecraft)](https://minecraft.net)
 [![License](https://img.shields.io/badge/License-AGPL--3.0-blue)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-NeoForge-F16436)](https://neoforged.net)
@@ -22,6 +24,7 @@ Automatically translate untranslated language files in Minecraft, so you can enj
 - [Configuration](#configuration)
 - [Translation API](#translation-api)
 - [How It Works](#how-it-works)
+- [Supported Versions](#supported-versions)
 - [License](#license)
 
 ## Features
@@ -38,7 +41,7 @@ The core feature. When Minecraft loads resources, AutoTranslation Next detects l
 
 | Engine | Description |
 |--------|-------------|
-| **Google Translate** (default) | Uses `google-translate-proxy.tantu.com` — a China-accessible proxy. No DNS configuration or mirror setup needed. |
+| **Google Translate** (default) | Uses `google-translate-proxy.tantu.com` — a Mainland China-accessible proxy. No DNS configuration or mirror setup needed. |
 | **AAAABBBB** | Test-purpose translator. Always returns "AAAABBBB" for all inputs. Useful for verifying the translation pipeline is working correctly. |
 
 ### 🧠 Smart English Detection
@@ -83,16 +86,6 @@ This is especially useful for modpack creators and translation teams.
 |------------|----------|-------|
 | [NeoForge](https://neoforged.net) | ✅ | Minecraft 1.21.1 |
 | [Cloth Config API](https://modrinth.com/mod/cloth-config) | ✅ | v15+ |
-
-## Installation
-
-1. Install [NeoForge](https://neoforged.net) for Minecraft 1.21.1
-2. Install [Cloth Config API](https://modrinth.com/mod/cloth-config)
-3. Download the latest AutoTranslation Next `.jar` from [Modrinth](https://modrinth.com/mod/autotranslation) (recommended) or [CurseForge](https://www.curseforge.com/minecraft/mc-mods/autotranslation)
-4. Place the `.jar` file in your `mods/` folder
-5. Launch the game!
-
-> 💡 For development builds, check [GitHub Actions](https://github.com/LangYueMc/AutoTranslation/actions) (requires GitHub login).
 
 ## Commands
 
@@ -147,6 +140,15 @@ The `AutoTranslationNext/` folder contains:
 
 You can manually polish the translated files and use the `pack_resource` command to package them into a standard Minecraft resource pack for distribution.
 
+## Supported Versions
+
+This mod is developed and maintained for the following versions only. Version adaptation requests outside this table will not be considered.
+
+| Game Version / Loader | Support Status |
+|------|------|
+| 1.21.1 NeoForge | Active |
+| 26.2 NeoForge | Coming soon |
+
 ## License
 
 This project is licensed under the [GNU Affero General Public License v3.0](LICENSE).
@@ -155,11 +157,13 @@ This project is licensed under the [GNU Affero General Public License v3.0](LICE
 
 # 中文
 
+由于原作者表示放弃开发，所以本项目是 [Moirstral/AutoTranslation](https://github.com/Moirstral/AutoTranslation) 的续更版。
+
 # AutoTranslation Next（自动翻译 Next）
 
 [![Modrinth](https://img.shields.io/badge/Modrinth-下载-00AF5C?logo=modrinth)](https://modrinth.com/mod/autotranslation)
 [![CurseForge](https://img.shields.io/badge/CurseForge-下载-F16436?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/autotranslation)
-[![GitHub](https://img.shields.io/badge/GitHub-源码-181717?logo=github)](https://github.com/LangYueMc/AutoTranslation)
+[![GitHub](https://img.shields.io/badge/GitHub-源码-181717?logo=github)](https://github.com/pkjsjq/AutoTranslation-Next)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62B47A?logo=minecraft)](https://minecraft.net)
 [![License](https://img.shields.io/badge/License-AGPL--3.0-blue)](LICENSE)
 [![Platform](https://img.shields.io/badge/平台-NeoForge-F16436)](https://neoforged.net)
@@ -174,6 +178,7 @@ This project is licensed under the [GNU Affero General Public License v3.0](LICE
 - [配置](#配置)
 - [翻译 API（开发者）](#翻译-api开发者)
 - [工作原理](#工作原理)
+- [各版本支持情况](#各版本支持情况)
 - [开源协议](#开源协议)
 
 ## 前言
@@ -198,7 +203,7 @@ AutoTranslation Next 正是为解决这些痛点而生——它在游戏加载�
 
 | 引擎 | 说明 |
 |------|------|
-| **Google 翻译**（默认） | 使用 `google-translate-proxy.tantu.com` 代理，国内可直接访问，无需配置 DNS 或镜像站 |
+| **谷歌翻译**（默认） | 使用 `google-translate-proxy.tantu.com` —— 一个在中国大陆可访问的代理。无需配置 DNS 或设置镜像。 |
 | **AAAABBBB** | 测试用翻译器，所有翻译固定返回 "AAAABBBB"，方便验证翻译管线是否正常工作 |
 
 ### 🧠 智能英文识别
@@ -243,16 +248,6 @@ HTTP 客户端采用 JDK 内置的 `java.net.http.HttpClient`，无需 Apache Ht
 |------|------|------|
 | [NeoForge](https://neoforged.net) | ✅ | Minecraft 1.21.1 |
 | [Cloth Config API](https://modrinth.com/mod/cloth-config) | ✅ | v15+ |
-
-## 安装
-
-1. 安装 [NeoForge](https://neoforged.net)（Minecraft 1.21.1 版本）
-2. 安装 [Cloth Config API](https://modrinth.com/mod/cloth-config)
-3. 从 [Modrinth](https://modrinth.com/mod/autotranslation)（推荐）或 [CurseForge](https://www.curseforge.com/minecraft/mc-mods/autotranslation) 下载最新版 AutoTranslation Next
-4. 将 `.jar` 文件放入 `mods/` 文件夹
-5. 启动游戏！
-
-> 💡 如需获取开发版，前往 [GitHub Actions](https://github.com/LangYueMc/AutoTranslation/actions)（需登录 GitHub 账号）。
 
 ## 游戏内指令
 
@@ -306,6 +301,15 @@ TranslatorManager.registerTranslator("my_translator", MyTranslator::new);
 - **翻译文件** — 机翻输出
 
 你可以手动润色翻译文件，然后用 `pack_resource` 指令打包为标准 Minecraft 资源包进行分发。
+
+## 各版本支持情况
+
+模组仅在以下版本上开发和维护，暂不考虑表格之外的版本适配请求。
+
+| 游戏版本 / 加载器 | 支持状态 |
+|------|------|
+| 1.21.1 NeoForge | 持续更新 |
+| 26.2 NeoForge | 即将支持 |
 
 ## 开源协议
 
