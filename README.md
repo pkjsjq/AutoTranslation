@@ -88,14 +88,14 @@ Polish the auto-translated text and export it as a standard Minecraft resource p
 
 This is especially useful for modpack creators and translation teams.
 
-## Dependencies
+# Dependencies
 
 | Dependency | Required | Notes |
 |------------|----------|-------|
 | [NeoForge](https://neoforged.net) | ✅ | Minecraft 1.21.1 |
 | [Cloth Config API](https://modrinth.com/mod/cloth-config) | ✅ | v15+ |
 
-## Commands
+# Commands
 
 All commands require confirmation first. Run `/auto_translation confirm` before executing any other command:
 
@@ -106,7 +106,7 @@ All commands require confirmation first. Run `/auto_translation confirm` before 
 /auto_translation pack_resource increment   Export incremental resource pack
 ```
 
-## Configuration
+# Configuration
 
 Open **Mods** → **AutoTranslation Next** → **Config** (requires Cloth Config API) to access all settings in-game. Alternatively, edit the config file at `config/autotranslation.json`.
 
@@ -119,7 +119,7 @@ Key configuration items:
 - **Filter Mode** — Whitelist or blacklist specific mods/keys from translation
 - **Word Blacklist** — Words or patterns to skip during translation
 
-## Translation API
+# Translation API
 
 AutoTranslation Next has an extensible translator architecture. To add a custom translation engine:
 
@@ -134,7 +134,7 @@ TranslatorManager.registerTranslator("my_translator", MyTranslator::new);
 
 Your translator will then appear as an option in the in-game config menu.
 
-## How It Works
+# How It Works
 
 1. When Minecraft loads resources, AutoTranslation Next intercepts the language loading process
 2. For each language entry that has no translation for the current game language, it checks the entry against the configurable English-feature regex
@@ -148,7 +148,7 @@ The `AutoTranslationNext/` folder contains:
 
 You can manually polish the translated files and use the `pack_resource` command to package them into a standard Minecraft resource pack for distribution.
 
-## Supported Versions
+# Supported Versions
 
 This mod is developed and maintained for the following versions only. Version adaptation requests outside this table will not be considered.
 
@@ -157,7 +157,7 @@ This mod is developed and maintained for the following versions only. Version ad
 | 1.21.1 NeoForge | Active |
 | 26.2 NeoForge | Coming soon |
 
-## License
+# License
 
 This project is licensed under the [GNU Affero General Public License v3.0](LICENSE).
 
@@ -249,14 +249,14 @@ HTTP 客户端采用 JDK 内置的 `java.net.http.HttpClient`，无需 Apache Ht
 
 对整合包作者和汉化组极其便利。
 
-## 前置模组
+# 前置模组
 
 | 前置 | 必须 | 备注 |
 |------|------|------|
 | [NeoForge](https://neoforged.net) | ✅ | Minecraft 1.21.1 |
 | [Cloth Config API](https://modrinth.com/mod/cloth-config) | ✅ | v15+ |
 
-## 游戏内指令
+# 游戏内指令
 
 所有指令需要先确认执行。先运行 `/auto_translation confirm`，再执行其他指令：
 
@@ -267,7 +267,7 @@ HTTP 客户端采用 JDK 内置的 `java.net.http.HttpClient`，无需 Apache Ht
 /auto_translation pack_resource increment   增量打包资源包
 ```
 
-## 配置
+# 配置
 
 在游戏中打开 **Mods** → **AutoTranslation Next** → **Config**（需安装 Cloth Config API）即可可视化配置。也可直接编辑 `config/autotranslation.json` 配置文件。
 
@@ -280,7 +280,7 @@ HTTP 客户端采用 JDK 内置的 `java.net.http.HttpClient`，无需 Apache Ht
 - **筛选模式** — 白名单/黑名单模式，控制哪些模组或 key 纳入/排除翻译
 - **单词黑名单** — 跳过包含特定词汇的文本
 
-## 翻译 API（开发者）
+# 翻译 API（开发者）
 
 AutoTranslation Next 拥有可扩展的翻译器架构。添加自定义翻译引擎：
 
@@ -295,7 +295,7 @@ TranslatorManager.registerTranslator("my_translator", MyTranslator::new);
 
 注册后，你的翻译器会自动出现在游戏内的翻译引擎选项中。
 
-## 工作原理
+# 工作原理
 
 1. Minecraft 加载资源时，AutoTranslation Next 拦截语言加载流程
 2. 对每个缺少当前语言翻译的条目，使用可配置的正则表达式判断是否需要翻译
@@ -309,7 +309,7 @@ TranslatorManager.registerTranslator("my_translator", MyTranslator::new);
 
 你可以手动润色翻译文件，然后用 `pack_resource` 指令打包为标准 Minecraft 资源包进行分发。
 
-## 各版本支持情况
+# 各版本支持情况
 
 模组仅在以下版本上开发和维护，暂不考虑表格之外的版本适配请求。
 
@@ -318,7 +318,7 @@ TranslatorManager.registerTranslator("my_translator", MyTranslator::new);
 | 1.21.1 NeoForge | 持续更新 |
 | 26.2 NeoForge | 即将支持 |
 
-## 开源协议
+# 开源协议
 
 本项目基于 [GNU Affero General Public License v3.0](LICENSE) 开源。
 
