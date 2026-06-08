@@ -17,15 +17,23 @@ As the original author has indicated that development has been abandoned, this p
 
 Automatically translate untranslated language files in Minecraft, so you can enjoy any mod in your preferred language without waiting for manual translations or PRs to be merged.
 
+> ⚠️ **V2.0.0 Breaking Changes:** Migrated from Architectury (Forge/Fabric) to pure NeoForge, now only supports Minecraft 1.21.1. **The screen translation feature has been removed** — only language file auto-translation is retained. See [CHANGELOG](CHANGELOG.md) for details.
+
+- [Background](#background)
 - [Features](#features)
 - [Dependencies](#dependencies)
-- [Installation](#installation)
 - [Commands](#commands)
 - [Configuration](#configuration)
 - [Translation API](#translation-api)
 - [How It Works](#how-it-works)
 - [Supported Versions](#supported-versions)
 - [License](#license)
+
+## Background
+
+Many Minecraft mods are English-only. Even if you submit a translation PR, the update cycle is unpredictable, and many mod authors don't accept translation PRs at all. While there are existing "auto translation" mods, they still suffer from delayed updates, untranslated niche mods, and inability to handle hardcoded text.
+
+AutoTranslation Next was created to solve exactly these pain points — it automatically detects and translates missing language entries during resource loading, **without modifying any mod files**. Translations are cached locally, ready to be polished and exported as a resource pack anytime.
 
 ## Features
 
@@ -170,10 +178,11 @@ This project is licensed under the [GNU Affero General Public License v3.0](LICE
 
 自动翻译 Minecraft 中未翻译的语言文件，让你无需等待人工翻译或 PR 合并，就能用自己喜欢的语言畅玩任何模组。
 
+> ⚠️ **V2.0.0 重大变更：** 从 Architectury (Forge/Fabric) 迁移至纯 NeoForge，仅支持 Minecraft 1.21.1。**屏幕翻译功能已移除**，仅保留语言文件自动翻译。详见 [CHANGELOG](CHANGELOG.md)。
+
 - [前言](#前言)
 - [功能](#功能)
 - [前置模组](#前置模组)
-- [安装](#安装)
 - [游戏内指令](#游戏内指令)
 - [配置](#配置)
 - [翻译 API（开发者）](#翻译-api开发者)
@@ -186,8 +195,6 @@ This project is licensed under the [GNU Affero General Public License v3.0](LICE
 很多模组只有英文，即使向作者提交翻译 PR，更新周期也不确定，更有不少模组根本不接受翻译 PR。虽然已有「自动汉化更新」模组，但仍存在更新不及时、小众模组无人翻译、硬编码文本无法汉化等问题。
 
 AutoTranslation Next 正是为解决这些痛点而生——它在游戏加载资源时自动检测并翻译缺失的语言条目，**不修改任何模组文件**，翻译结果缓存在本地，可随时润色、导出为资源包。
-
-> ⚠️ **V2.0.0 重大变更：** 从 Architectury (Forge/Fabric) 迁移至纯 NeoForge，仅支持 Minecraft 1.21.1。**屏幕翻译功能已移除**，仅保留语言文件自动翻译。详见 [CHANGELOG](CHANGELOG.md)。
 
 ## 功能
 

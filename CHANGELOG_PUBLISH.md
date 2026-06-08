@@ -12,7 +12,7 @@
 8. **移除 Fabric/Forge 支持**: 不再支持 Fabric 和 Forge 平台，仅 NeoForge；
 9.  **修复多个关键 Bug**: Mixin 静默不生效、命令事件总线错误、游戏崩溃等。
 
-[完整更新日志](https://github.com/LangYueMc/AutoTranslation/blob/master/CHANGELOG.md)
+[完整更新日志](https://github.com/pkjsjq/AutoTranslation-Next/blob/master/CHANGELOG.md)
 - - -
 
 ## Changed
@@ -27,4 +27,4 @@
 8. **Dropped Fabric/Forge**: No longer supports Fabric or Forge, NeoForge only;
 9.  **Multiple Critical Fixes**: Silent Mixin failure, command event bus error, game crash, etc.
 
-[Full CHANGELOG](https://github.com/LangYueMc/AutoTranslation/blob/master/CHANGELOG_en.md)
+[Full CHANGELOG](https://github.com/pkjsjq/AutoTranslation-Next/blob/master/CHANGELOG_en.md)

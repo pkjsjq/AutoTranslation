@@ -2,7 +2,7 @@ modLoader = "javafml"
 loaderVersion = "[4,)"
 
 license = "GNU Affero General Public License v3.0"
-issueTrackerURL = "https://github.com/LangYueMc/AutoTranslation/issues/new"
+issueTrackerURL = "https://github.com/pkjsjq/AutoTranslation-Next/issues/new"
 
 [[mods]]
 modId = "autotranslation"
