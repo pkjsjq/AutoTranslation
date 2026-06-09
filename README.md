@@ -8,8 +8,8 @@ As the original author has indicated that development has been abandoned, this p
 
 # AutoTranslation Next
 
-[![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?logo=modrinth)](https://modrinth.com/mod/autotranslation)
-[![CurseForge](https://img.shields.io/badge/CurseForge-Download-F16436?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/autotranslation)
+[![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?logo=modrinth)](https://modrinth.com/mod/autotranslation-next)
+[![CurseForge](https://img.shields.io/badge/CurseForge-Download-F16436?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/autotranslation-next)
 [![GitHub](https://img.shields.io/badge/GitHub-Source-181717?logo=github)](https://github.com/pkjsjq/AutoTranslation-Next)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62B47A?logo=minecraft)](https://minecraft.net)
 [![License](https://img.shields.io/badge/License-AGPL--3.0-blue)](LICENSE)
@@ -169,8 +169,8 @@ This project is licensed under the [GNU Affero General Public License v3.0](LICE
 
 # AutoTranslation Next（自动翻译 Next）
 
-[![Modrinth](https://img.shields.io/badge/Modrinth-下载-00AF5C?logo=modrinth)](https://modrinth.com/mod/autotranslation)
-[![CurseForge](https://img.shields.io/badge/CurseForge-下载-F16436?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/autotranslation)
+[![Modrinth](https://img.shields.io/badge/Modrinth-下载-00AF5C?logo=modrinth)](https://modrinth.com/mod/autotranslation-next)
+[![CurseForge](https://img.shields.io/badge/CurseForge-下载-F16436?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/autotranslation-next)
 [![GitHub](https://img.shields.io/badge/GitHub-源码-181717?logo=github)](https://github.com/pkjsjq/AutoTranslation-Next)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62B47A?logo=minecraft)](https://minecraft.net)
 [![License](https://img.shields.io/badge/License-AGPL--3.0-blue)](LICENSE)
