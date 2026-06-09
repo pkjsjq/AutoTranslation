@@ -11,6 +11,7 @@ import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 import net.minecraft.world.InteractionResult;
 import net.neoforged.fml.loading.FMLPaths;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -72,9 +73,12 @@ public class Config implements ConfigData {
 
     public static class Google {
 
+        // 由 Config.init() 在生成默认配置前设置，实现语言感知的域名默认值
+        static String defaultDomain = "translate.google.com";
+
         @Comment("Google 翻译备用域名，可以填镜像站，只要 API 跟谷歌相同就行")
         @ConfigEntry.Gui.RequiresRestart
-        public String domain = "translate.google.com";
+        public String domain = defaultDomain;
 
         @Comment("Google 服务器 IP，如果您所在地区无法直连域名，可以配置此项\n 参考 https://github.com/Ponderfly/GoogleTranslateIpCheck")
         @ConfigEntry.Gui.Excluded
@@ -92,27 +96,64 @@ public class Config implements ConfigData {
     }
 
     public static void init() {
-        AutoConfig.register(Config.class, JanksonConfigSerializer::new);
-
-        // 首次安装时根据游戏语言自动选择翻译域名
+        // 首次安装时根据游戏语言选择翻译域名。
+        // 必须在 AutoConfig.register() 之前设置 Google.defaultDomain，
+        // 因为 register() 内部就会创建 Config 实例并写入配置文件。
         Path configPath = FMLPaths.CONFIGDIR.get().resolve("autotranslation.json5");
-        boolean isNewConfig = !Files.exists(configPath);
+        boolean configExists = Files.exists(configPath);
+        AutoTranslation.LOGGER.info("[DEBUG] Config.init: configPath={}, exists={}", configPath, configExists);
 
+        if (!configExists) {
+            String gameLang = getGameLanguage();
+            AutoTranslation.LOGGER.info("[DEBUG] Config.init: new config, gameLang={}", gameLang);
+            if ("zh_cn".equalsIgnoreCase(gameLang)) {
+                Google.defaultDomain = "google-translate-proxy.tantu.com";
+                AutoTranslation.LOGGER.info("[DEBUG] Config.init: defaultDomain set to proxy");
+            }
+        }
+
+        AutoConfig.register(Config.class, JanksonConfigSerializer::new);
         AutoTranslation.CONFIG = AutoConfig.getConfigHolder(Config.class).getConfig();
+        AutoTranslation.LOGGER.info("[DEBUG] Config.init: after getConfig, domain={}",
+                AutoTranslation.CONFIG.google.domain);
 
-        // Clean google domain
         cleanDomain();
 
-        if (isNewConfig && "zh_cn".equalsIgnoreCase(AutoTranslation.getLanguage())) {
-            AutoTranslation.CONFIG.google.domain = "google-translate-proxy.tantu.com";
-            AutoConfig.getConfigHolder(Config.class).save();
-        }
+        // 重置，避免影响后续可能的 Config 实例化
+        Google.defaultDomain = "translate.google.com";
 
         // 配置保存时自动删除翻译缓存，确保新设置下次启动时生效
         AutoConfig.getConfigHolder(Config.class).registerSaveListener((holder, config) -> {
             deleteAutoTranslationFolder();
             return InteractionResult.SUCCESS;
         });
+    }
+
+    /**
+     * 直接从 options.txt 读取游戏语言设置，不依赖 Minecraft.getInstance()。
+     * 模组构造阶段 Minecraft 实例可能尚未初始化，此时 getLanguage() 会返回 "en_us"。
+     */
+    private static String getGameLanguage() {
+        try {
+            Path optionsPath = FMLPaths.GAMEDIR.get().resolve("options.txt");
+            if (!Files.exists(optionsPath)) {
+                AutoTranslation.LOGGER.warn("[DEBUG] options.txt not found, falling back to default");
+                return AutoTranslation.getLanguage();
+            }
+            try (BufferedReader reader = Files.newBufferedReader(optionsPath)) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    if (line.startsWith("lang:")) {
+                        String lang = line.substring(5).trim();
+                        AutoTranslation.LOGGER.info("[DEBUG] options.txt lang: {}", lang);
+                        return lang;
+                    }
+                }
+            }
+        } catch (Throwable e) {
+            AutoTranslation.LOGGER.warn("[DEBUG] Failed to read options.txt: {}", e.getMessage());
+        }
+        return AutoTranslation.getLanguage();
     }
 
     private static void cleanDomain() {
