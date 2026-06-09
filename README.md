@@ -12,12 +12,12 @@ As the original author has indicated that development has been abandoned, this p
 [![CurseForge](https://img.shields.io/badge/CurseForge-Download-F16436?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/autotranslation-next)
 [![GitHub](https://img.shields.io/badge/GitHub-Source-181717?logo=github)](https://github.com/pkjsjq/AutoTranslation-Next)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62B47A?logo=minecraft)](https://minecraft.net)
-[![License](https://img.shields.io/badge/License-AGPL--3.0-blue)](LICENSE)
+[![License](https://img.shields.io/badge/License-AGPL--3.0-blue)](https://github.com/pkjsjq/AutoTranslation-Next/blob/master/LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-NeoForge-F16436)](https://neoforged.net)
 
 Automatically translate untranslated language files in Minecraft, so you can enjoy any mod in your preferred language without waiting for manual translations or PRs to be merged.
 
-> ⚠️ **V2.0.0 Breaking Changes:** Migrated from Architectury (Forge/Fabric) to pure NeoForge, now only supports Minecraft 1.21.1. **The screen translation feature has been removed** — only language file auto-translation is retained. See [CHANGELOG](CHANGELOG.md) for details.
+> ⚠️ **V2.0.0 Breaking Changes:** Migrated from Architectury (Forge/Fabric) to pure NeoForge, now only supports Minecraft 1.21.1. **The screen translation feature has been removed** — only language file auto-translation is retained. See [CHANGELOG](https://github.com/pkjsjq/AutoTranslation-Next/blob/master/CHANGELOG.md) for details.
 
 - [Background](#background)
 - [Features](#features)
@@ -159,7 +159,7 @@ This mod is developed and maintained for the following versions only. Version ad
 
 # License
 
-This project is licensed under the [GNU Affero General Public License v3.0](LICENSE).
+This project is licensed under the [GNU Affero General Public License v3.0](https://github.com/pkjsjq/AutoTranslation-Next/blob/master/LICENSE).
 
 ---
 
@@ -173,12 +173,12 @@ This project is licensed under the [GNU Affero General Public License v3.0](LICE
 [![CurseForge](https://img.shields.io/badge/CurseForge-下载-F16436?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/autotranslation-next)
 [![GitHub](https://img.shields.io/badge/GitHub-源码-181717?logo=github)](https://github.com/pkjsjq/AutoTranslation-Next)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62B47A?logo=minecraft)](https://minecraft.net)
-[![License](https://img.shields.io/badge/License-AGPL--3.0-blue)](LICENSE)
+[![License](https://img.shields.io/badge/License-AGPL--3.0-blue)](https://github.com/pkjsjq/AutoTranslation-Next/blob/master/LICENSE)
 [![Platform](https://img.shields.io/badge/平台-NeoForge-F16436)](https://neoforged.net)
 
 自动翻译 Minecraft 中未翻译的语言文件，让你无需等待人工翻译或 PR 合并，就能用自己喜欢的语言畅玩任何模组。
 
-> ⚠️ **V2.0.0 重大变更：** 从 Architectury (Forge/Fabric) 迁移至纯 NeoForge，仅支持 Minecraft 1.21.1。**屏幕翻译功能已移除**，仅保留语言文件自动翻译。详见 [CHANGELOG](CHANGELOG.md)。
+> ⚠️ **V2.0.0 重大变更：** 从 Architectury (Forge/Fabric) 迁移至纯 NeoForge，仅支持 Minecraft 1.21.1。**屏幕翻译功能已移除**，仅保留语言文件自动翻译。详见 [CHANGELOG](https://github.com/pkjsjq/AutoTranslation-Next/blob/master/CHANGELOG.md)。
 
 - [前言](#前言)
 - [功能](#功能)
@@ -320,7 +320,7 @@ TranslatorManager.registerTranslator("my_translator", MyTranslator::new);
 
 # 开源协议
 
-本项目基于 [GNU Affero General Public License v3.0](LICENSE) 开源。
+本项目基于 [GNU Affero General Public License v3.0](https://github.com/pkjsjq/AutoTranslation-Next/blob/master/LICENSE) 开源。
 
 ---
 
